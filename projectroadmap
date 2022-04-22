@@ -3,8 +3,8 @@
 
 Sprint 1
 
-    Inititate KSU Github account
-    Link Github account to the KSU-IS organzation
+    Initiate KSU Github account
+    Link Github account to the KSU-IS organization
     Edit and update Readme file
     Conduct practice examples on existing code
     
@@ -29,7 +29,7 @@ Sprint 2
 
 
     In the Discord Developer Portal, navigate to the "OAuth2" tab and place a check in the "bot" box under "Scopes"
-    Set the desired permissions roles of the bot, preferrably not the administrator role
+    Set the desired permissions roles of the bot, preferably not the administrator role
     Now copy the URL at the top of the page and paste in a new browser in order to add the Bot to the Discord server
 
 
@@ -41,7 +41,7 @@ Sprint 2
     Now create a new line of code after the TOKEN and type "client = discord.CLient()"
     On the next line, type "@client.event"
     On the next line under, type "async def on_ready():"
-    For the next line, indent once then type "print('We have loggen in as {0.user}'.format(client))"
+    For the next line, indent once then type "print('We have logged in as {0.user}'.format(client))"
     The next line should contain the following: client.run(TOKEN)
     
       Example of code so far:
@@ -56,7 +56,7 @@ Sprint 2
                   9
                   10   @client.event
                   11   sync def on_ready():
-                  12       "print('We have loggen in as {0.user}'.format(client))
+                  12       "print('We have logged in as {0.user}'.format(client))
                   13
                   14
                   15   client.run(TOKEN)
@@ -64,8 +64,7 @@ Sprint 2
                   
      After running the code, the Discord bot should now be online! 
     
-
-
+     Now to code the customized messages and announcements 
 
 
 v
