@@ -81,6 +81,4 @@ Sprint 3
 
 
 
-v
-g
                
