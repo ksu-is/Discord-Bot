@@ -17,6 +17,8 @@ def get_quote():
 async def on_ready():
     print("{0.user} is now online!".format(client))
 
+# Splits ending numbers out of username and logs chat info
+
 @client.event
 async def on_message(message):
     username = str(message.author).split('#')[0]
@@ -24,6 +26,7 @@ async def on_message(message):
     channel = str(message.channel.name)
     print(f'{username}: {user_message} ({channel})')
 
+# Keeps bot from responding to own messages
     if message.author == client.user:
         return
 
@@ -34,10 +37,13 @@ async def on_message(message):
         elif user_message.lower() == 'bye':
             await message.channel.send(f'See you later {username}!')
             return
-        elif user_message.lower() == '$sports':
-            await message.channel.send(f'https://ksuowls.com/calendar')
+        elif user_message.lower() == '$python-start':
+            await message.channel.send(f'Get started with the newest Python version and tutorials from W3sSchools! https://www.python.org/  https://www.w3schools.com/python/')
             return
-        elif user_message.lower() == '!random':
+        elif user_message.lower() == '$sports':
+            await message.channel.send(f'Check out upcoming KSU sporting events here! https://ksuowls.com/calendar')
+            return
+        elif user_message.lower() == '$random':
             response = f'This is your random number: {random.randrange(1000000)}'
             await message.channel.send(response)
             return
